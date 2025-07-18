@@ -5,8 +5,8 @@ export default function initMenuMobile() {
   const listaMenu = document.querySelector("[data-menu='list']");
   const eventos = ["click", "touchstart"];
   function openMenu() {
-    btnMenu.classList.toggle("ativo");
-    listaMenu.classList.toggle("ativo");
+    btnMenu.classList.add("ativo");
+    listaMenu.classList.add("ativo");
     outsideClick(listaMenu, eventos, () => {
       btnMenu.classList.remove("ativo");
       listaMenu.classList.remove("ativo");

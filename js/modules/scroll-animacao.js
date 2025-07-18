@@ -1,5 +1,6 @@
 export default function initScrollAnimation() {
   const sections = document.querySelectorAll("[data-anime='scroll']");
+  const windowMetade = window.innerHeight * 0.6;
   function animaScroll() {
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
@@ -14,9 +15,8 @@ export default function initScrollAnimation() {
       // if (sectionTop < -sectionHeight * 0.3) section.classList.remove("ativo");
     });
   }
-  if (sections.lenght) {
+  if (sections.length) {
     animaScroll();
-    const windowMetade = window.innerHeight * 0.6;
 
     window.addEventListener("scroll", animaScroll);
   }
