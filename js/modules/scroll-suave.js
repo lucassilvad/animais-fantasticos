@@ -1,6 +1,6 @@
 export default class ScrollSuave {
   constructor(links, options) {
-    this.linksInternos = links;
+    this.linksInternos = document.querySelectorAll(links);
     if (options === undefined) {
       this.options = { behavior: "smooth", block: "start" };
     } else {
@@ -25,14 +25,15 @@ export default class ScrollSuave {
   */
   }
   addLinkEvent() {
-    linksInternos.forEach((link) =>
-      link.addEventListener("click", scrollToSection)
-    );
+    this.linksInternos.forEach((link) => {
+      link.addEventListener("click", this.scrollToSection);
+    });
   }
 
   init() {
-    if (linksInternos.length) {
+    if (this.linksInternos.length) {
       this.addLinkEvent();
     }
+    return this;
   }
 }
