@@ -27,19 +27,4 @@ export default class TabNav {
     }
     return this;
   }
-
-  metodo() {
-    if (tabMenu.length && tabContent.length) {
-      tabContent[0].classList.add(
-        this.activeClass,
-        tabContent[0].dataset.anime
-      );
-
-      tabMenu.forEach((itemMenu, index) => {
-        itemMenu.addEventListener("click", () => {
-          activeTab(index);
-        });
-      });
-    }
-  }
 }
