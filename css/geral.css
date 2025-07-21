@@ -200,6 +200,7 @@ a {
 }
 
 .btc-preco {
+  display: inline-block;
   background: #33ff44;
   padding: 4px 8px;
   font-weight: bold;
