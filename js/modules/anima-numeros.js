@@ -7,6 +7,7 @@ export default class AnimaNumeros {
     // bind o this do objeto ao callback da mutação
     this.handleMutation = this.handleMutation.bind(this);
   }
+
   // Recebe um elemnto do dom, com um número em seu texto
   // Incrementa a partir de zero até o número final
   static incrementarNumero(numero) {
