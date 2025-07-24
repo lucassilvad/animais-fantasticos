@@ -47,7 +47,7 @@
   }
   .js [data-menu="list"].ativo {
     display: block;
-    animation: show-right 0.3s forwards;
+    animation: show-right 0.3s forwards ease-in-out;
   }
   .js .dropdown-menu {
     position: static;

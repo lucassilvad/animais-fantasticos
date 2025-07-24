@@ -277,12 +277,12 @@ a {
   opacity: 1;
 }
 .js [data-tab="content"] .show-right.ativo {
-  animation: showright 0.5s forwards;
+  animation: show-right 0.5s forwards;
 }
 .js [data-tab="content"] .show-down.ativo {
-  animation: showdown 0.5s forwards;
+  animation: show-down 0.5s forwards;
 }
-@keyframes showright {
+@keyframes show-right {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
@@ -293,7 +293,7 @@ a {
     transform: translate3d(0, 0, 0);
   }
 }
-@keyframes showdown {
+@keyframes show-down {
   from {
     opacity: 0;
     transform: translate3d(0, 30px, 0);
@@ -314,12 +314,20 @@ a {
 }
 
 .js [data-anime="accordion"] dt::after {
-  content: "⬑";
+  content: "";
+  display: inline-block;
+  background: url("../img/arrow-red.svg") center center no-repeat;
+  width: 10px;
+  height: 10px;
   margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
-.js [data-anime="accordion"] dt.ativo::after {
-  content: "⬎";
+.js [data-anime="accordion"] dt.ativo::after,
+.js [data-anime="accordion"] dt:hover::after {
+  content: "";
+  transform: rotate(-90deg);
 }
 
 .js [data-anime="accordion"] dd {
@@ -371,4 +379,11 @@ a {
   border-radius: 50%;
   background: #ee5544;
   margin-left: 4px;
+}
+
+.arrow-black {
+  display: inline-block;
+  background: url("../img/arrow-black.svg") center center no-repeat;
+  width: 8px;
+  height: 10px;
 }
